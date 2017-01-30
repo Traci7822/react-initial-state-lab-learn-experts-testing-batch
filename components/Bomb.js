@@ -10,13 +10,23 @@ class Bomb extends React.Component {
   }
 
   render() {
+    const message = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`;
+
     return (
-      const notification = this.state.secondsLeft === 0 ? 'Boom!' : `{this.state.secondsLeft} seconds left before I go boom!`;
       <div>
-        {notification}
+        {message}
       </div>
     );
   }
 }
+
+// render() {
+//   const message = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`;
+//
+//   return (
+//     <div>{message}</div>
+//   );
+// }
+// }
 
 module.exports = Bomb;
